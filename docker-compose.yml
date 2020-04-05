@@ -11,5 +11,5 @@ services:
     volumes:
       - ./mail:/var/customers/mail
     ports:
-      - 10023
+      - 783
     restart: unless-stopped
