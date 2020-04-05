@@ -10,9 +10,18 @@ ENV TRUSTED_NETWORKS=127.0.0.1
 
 EXPOSE 783
 
+# Update sources and preinstalled packages
 RUN apt-get update && \
-    apt-get upgrade -y --no-install-recommends && \
-    apt-get install -y --no-install-recommends \
+    apt-get upgrade -y --no-install-recommends
+
+# Install dependencies
+RUN apt-get install -y --no-install-recommends \
+	apt-utils \
+	gettext-base \
+    logrotate
+
+# Install SpamAssassin
+RUN apt-get install -y --no-install-recommends \
     spamassassin
 
 COPY ./etc/spamassassin/local.cf /etc/spamassassin/
