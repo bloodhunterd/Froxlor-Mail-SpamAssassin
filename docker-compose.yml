@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  spamassassin:
+    image: bloodhunterd/froxlor-mail-spamassassin
+    environment:
+      - MAIL_DIR: '/var/customers/mail'
+      - REPORT_SAFE: 0
+      - REQUIRED_SCORE: 3.0
+      - TRUSTED_NETWORKS: 127.0.0.1
+    volumes:
+      - ./mail:/var/customers/mail
+    ports:
+      - 10023
+    restart: unless-stopped
