@@ -21,6 +21,22 @@ See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-s
 
 ¹ *Possible values are separated by a slash or a range is indicated by a dash.*
 
+### Volumes
+
+```bash
+volumes:
+  - ./mail/:/var/customers/mail/
+```
+
+### Scheduled tasks
+
+Add the following lines to the host [crontab](https://www.linuxwiki.de/crontab), to learn SpamAssassin based on Inbox and Spam folders.
+
+```bash
+# Learn SpamAssassin
+0 4 * * * /usr/bin/docker exec froxlor-mail-spamassassin /bin/bash -c '/srv/learn.sh'
+```
+
 ## Update
 
 Please note the [changelog](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/CHANGELOG.md) to check for configuration changes before updating.

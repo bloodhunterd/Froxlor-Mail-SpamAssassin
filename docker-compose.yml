@@ -9,7 +9,7 @@ services:
       - REQUIRED_SCORE: 3.0
       - TRUSTED_NETWORKS: 127.0.0.1
     volumes:
-      - ./mail:/var/customers/mail
+      - ./mail:/var/customers/mail/
     ports:
       - 783
     restart: unless-stopped
