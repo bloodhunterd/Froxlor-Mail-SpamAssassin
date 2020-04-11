@@ -4,6 +4,7 @@ services:
   spamassassin:
     image: bloodhunterd/froxlor-mail-spamassassin
     environment:
+      - TZ: 'Europe/Berlin'
       - MAIL_DIR: '/var/customers/mail'
       - REPORT_SAFE: 0
       - REQUIRED_SCORE: 3.0

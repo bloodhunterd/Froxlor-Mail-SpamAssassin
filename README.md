@@ -14,10 +14,11 @@ See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-s
 
 | ENV | Values¹ | Default | Description
 |--- |--- |--- | ---
-| MAIL_DIR | Path | /var/customers/mail | Absolute path to the mail directory
+| TZ | [PHP: List of supported timezones - Manual](https://www.php.net/manual/en/timezones.php) | Europe/Berlin | Timezone.
+| MAIL_DIR | *Directory path* | /var/customers/mail | Absolute path to the mail directory
 | REPORT_SAFE | 0 / 2 | 0 | Save Spam message as attachment instead of modifying
 | REQUIRED_SCORE | 0.0 - ... | 3.0 | Threshold at which a message is considered spam
-| TRUSTED_NETWORKS | IP | 127.0.0.1 | Trusted networks or hosts
+| TRUSTED_NETWORKS | *FQDN / IP* | 127.0.0.1 | Trusted networks or hosts
 
 ¹ *Possible values are separated by a slash or a range is indicated by a dash.*
 

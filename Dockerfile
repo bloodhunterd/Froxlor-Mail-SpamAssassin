@@ -1,5 +1,8 @@
 FROM debian:stable-slim
 
+# Time
+ENV TZ=Europe/Berlin
+
 # Froxlor
 ENV MAIL_DIR=/var/customers/mail
 
