@@ -24,4 +24,5 @@ do
 	done
 done
 
-spamd
+# Start process and listen on all interfaces
+spamd -i
