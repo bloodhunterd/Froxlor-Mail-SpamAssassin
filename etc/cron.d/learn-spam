@@ -1,0 +1,2 @@
+# Learn SPAM (bad mails)
+${CRON_SPAM_MINUTE} ${CRON_SPAM_HOUR} * * * sa-learn --dbpath /var/lib/spamassassin/.spamassassin --spam ${MAIL_DIR}/*/*/*/.Spam/cur/*

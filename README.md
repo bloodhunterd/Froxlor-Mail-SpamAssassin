@@ -14,11 +14,16 @@ See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-s
 
 | ENV | Values¹ | Default | Description
 |--- |--- |--- | ---
-| TZ | [PHP: List of supported timezones - Manual](https://www.php.net/manual/en/timezones.php) | Europe/Berlin | Timezone.
+| CRON_HAM_MINUTE | *0 - 60* | 0 | Execute learn HAM Cron at this minute.
+| CRON_HAM_HOUR | *0 - 23* | 0 | Execute learn HAM Cron at this hour.
+| CRON_SPAM_MINUTE | *0 - 60* | 0 | Execute learn SPAM Cron at this minute.
+| CRON_SPAM_HOUR | *0 - 23* | 0 | Execute learn SPAM Cron at this hour.
 | MAIL_DIR | *Directory path* | /var/customers/mail | Absolute path to the mail directory
-| REPORT_SAFE | 0 / 2 | 0 | Save Spam message as attachment instead of modifying
-| REQUIRED_SCORE | 0.0 - ... | 3.0 | Threshold at which a message is considered spam
-| TRUSTED_NETWORKS | *FQDN / IP* | 127.0.0.1 | Trusted networks or hosts
+| REPORT_SAFE | 0 / 2 | 0 | Add Spam report as attachment instead of modifying the original message.
+| REQUIRED_SCORE | 0.0 - ... | 3.0 | Threshold at which a message is considered spam.
+| USE_PYZOR | *0 / 1* | 1 | Enable or disabled using [Pyzor](https://github.com/SpamExperts/pyzor).
+| TRUSTED_NETWORKS | *IP* |  | Exclude networks from Spam check.
+| TZ | [PHP: List of supported timezones - Manual](https://www.php.net/manual/en/timezones.php) | Europe/Berlin | Timezone.
 
 ¹ *Possible values are separated by a slash or a range is indicated by a dash.*
 
@@ -29,22 +34,19 @@ volumes:
   - ./mail/:/var/customers/mail/
 ```
 
-### Scheduled tasks
-
-Add the following lines to the host [crontab](https://www.linuxwiki.de/crontab), to learn SpamAssassin based on Inbox and Spam folders.
-
-```bash
-# Learn SpamAssassin
-0 4 * * * /usr/bin/docker exec froxlor-mail-spamassassin /bin/bash -c '/srv/learn.sh'
-```
-
 ## Update
 
 Please note the [changelog](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/CHANGELOG.md) to check for configuration changes before updating.
 
+```bash
+docker-compose pull
+docker-compose up -d
+```
+
 ## Build With
 
 * [SpamAssassin](https://spamassassin.apache.org/)
+* [Pyzor](https://github.com/SpamExperts/pyzor)
 * [Debian](https://www.debian.org/)
 * [Docker](https://www.docker.com/)
 

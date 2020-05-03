@@ -1,0 +1,2 @@
+# Learn HAM (good mails)
+${CRON_HAM_MINUTE} ${CRON_HAM_HOUR} * * * sa-learn --dbpath /var/lib/spamassassin/.spamassassin --ham ${MAIL_DIR}/*/*/*/cur/*

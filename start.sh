@@ -7,6 +7,7 @@ echo "${TZ}" > /etc/timezone
 # Get config files
 r=()
 r+=("$(find /etc/spamassassin/ -type f -name '*.cf')")
+r+=("$(find /etc/cron.d/ -type f -name 'learn-*')")
 
 # Replace environment vars
 for d in "${r[@]}"
@@ -23,6 +24,8 @@ do
 		fi
 	done
 done
+
+service cron start
 
 # Start process and listen on all interfaces
 spamd -i

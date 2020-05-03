@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## <a name="v1-1-0"></a> [1.1.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.0) - 03.05.2020
+
+### Features
+* [Pyzor](https://github.com/SpamExperts/pyzor) support added.
+
+### Fixes
+* None
+
 ## <a name="v1-0-1"></a> [1.0.1](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.0.1) - 28.04.2020
 
 ### Features
