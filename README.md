@@ -14,16 +14,19 @@ See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-s
 
 | ENV | Values¹ | Default | Description
 |--- |--- |--- | ---
+| TZ | [PHP: List of supported timezones - Manual](https://www.php.net/manual/en/timezones.php) | Europe/Berlin | Timezone.
+| MAIL_DIR | *Directory path* | /var/customers/mail | Absolute path to the mail directory
+| ALLOWED_IPS | *IPv4* | 127.0.0.1 | IP's who are allowed to connect to SpamAssassin.
+| REPORT_SAFE | 0 / 2 | 0 | Add Spam report as attachment instead of modifying the original message.
+| REQUIRED_SCORE | 0.0 - ... | 2.0 | Threshold at which a message is considered spam.
+| TRUSTED_NETWORKS | *IP* | 127.0.0.1 | Exclude networks from Spam check.
+| USE_BAYES | *0 / 1* | 1 | Enable or disabled using Bayes.
+| BAYES_AUTO_LEARN | *0 / 1* | 1 | Enable or disabled Bayes auto learning.
+| USE_PYZOR | *0 / 1* | 1 | Enable or disabled using [Pyzor](https://github.com/SpamExperts/pyzor).
 | CRON_HAM_MINUTE | *0 - 60* | 0 | Execute learn HAM Cron at this minute.
 | CRON_HAM_HOUR | *0 - 23* | 3 | Execute learn HAM Cron at this hour.
 | CRON_SPAM_MINUTE | *0 - 60* | 0 | Execute learn SPAM Cron at this minute.
 | CRON_SPAM_HOUR | *0 - 23* | 4 | Execute learn SPAM Cron at this hour.
-| MAIL_DIR | *Directory path* | /var/customers/mail | Absolute path to the mail directory
-| REPORT_SAFE | 0 / 2 | 0 | Add Spam report as attachment instead of modifying the original message.
-| REQUIRED_SCORE | 0.0 - ... | 3.0 | Threshold at which a message is considered spam.
-| USE_PYZOR | *0 / 1* | 1 | Enable or disabled using [Pyzor](https://github.com/SpamExperts/pyzor).
-| TRUSTED_NETWORKS | *IP* |  | Exclude networks from Spam check.
-| TZ | [PHP: List of supported timezones - Manual](https://www.php.net/manual/en/timezones.php) | Europe/Berlin | Timezone.
 
 ¹ *Possible values are separated by a slash or a range is indicated by a dash.*
 
