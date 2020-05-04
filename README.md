@@ -15,9 +15,9 @@ See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-s
 | ENV | Values¹ | Default | Description
 |--- |--- |--- | ---
 | CRON_HAM_MINUTE | *0 - 60* | 0 | Execute learn HAM Cron at this minute.
-| CRON_HAM_HOUR | *0 - 23* | 0 | Execute learn HAM Cron at this hour.
+| CRON_HAM_HOUR | *0 - 23* | 3 | Execute learn HAM Cron at this hour.
 | CRON_SPAM_MINUTE | *0 - 60* | 0 | Execute learn SPAM Cron at this minute.
-| CRON_SPAM_HOUR | *0 - 23* | 0 | Execute learn SPAM Cron at this hour.
+| CRON_SPAM_HOUR | *0 - 23* | 4 | Execute learn SPAM Cron at this hour.
 | MAIL_DIR | *Directory path* | /var/customers/mail | Absolute path to the mail directory
 | REPORT_SAFE | 0 / 2 | 0 | Add Spam report as attachment instead of modifying the original message.
 | REQUIRED_SCORE | 0.0 - ... | 3.0 | Threshold at which a message is considered spam.
