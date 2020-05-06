@@ -25,6 +25,8 @@ do
 	done
 done
 
+service syslog-ng start
+
 service cron start
 
 # Start process and listen on all interfaces and allowed IP's

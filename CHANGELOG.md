@@ -2,13 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## <a name="v1-1-2"></a> [1.1.2](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.2) - 06.05.2020
+
+### Features
+* None
+
+### Fixes
+* Stopped system logging.
+
 ## <a name="v1-1-1"></a> [1.1.1](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.1) - 04.05.2020
 
 ### Features
 * Environment configurations extended.
 
 ### Fixes
-* Allowed IP's parameter added.
+* IP restriction to localhost only.
 
 ## <a name="v1-1-0"></a> [1.1.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.0) - 03.05.2020
 

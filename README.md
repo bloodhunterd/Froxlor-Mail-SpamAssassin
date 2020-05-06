@@ -23,14 +23,16 @@ See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-s
 | USE_BAYES | *0 / 1* | 1 | Enable or disabled using Bayes.
 | BAYES_AUTO_LEARN | *0 / 1* | 1 | Enable or disabled Bayes auto learning.
 | USE_PYZOR | *0 / 1* | 1 | Enable or disabled using [Pyzor](https://github.com/SpamExperts/pyzor).
-| CRON_HAM_MINUTE | *0 - 60* | 0 | Execute learn HAM Cron at this minute.
+| CRON_HAM_MINUTE | *0 - 59* | 0 | Execute learn HAM Cron at this minute.
 | CRON_HAM_HOUR | *0 - 23* | 3 | Execute learn HAM Cron at this hour.
-| CRON_SPAM_MINUTE | *0 - 60* | 0 | Execute learn SPAM Cron at this minute.
+| CRON_SPAM_MINUTE | *0 - 59* | 0 | Execute learn SPAM Cron at this minute.
 | CRON_SPAM_HOUR | *0 - 23* | 4 | Execute learn SPAM Cron at this hour.
 
 ¹ *Possible values are separated by a slash or a range is indicated by a dash.*
 
 ### Volumes
+
+To use the scheduled HAM and SPAM learning it's required to mount the mail directory.
 
 ```bash
 volumes:
