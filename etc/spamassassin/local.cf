@@ -1,13 +1,10 @@
 report_safe         ${REPORT_SAFE}
 required_score      ${REQUIRED_SCORE}
 trusted_networks    ${TRUSTED_NETWORKS}
-# Bayes
-use_bayes           ${USE_BAYES}
-use_bayes_rules     ${USE_BAYES}
-bayes_auto_learn    ${BAYES_AUTO_LEARN}
-# Disable network check
+use_bayes           1
+use_bayes_rules     1
+bayes_auto_learn    1
 skip_rbl_checks     1
 skip_uribl_checks   1
-# Pyzor
-use_pyzor           ${USE_PYZOR}
+use_pyzor           1
 pyzor_options       --homedir /etc/spamassassin
