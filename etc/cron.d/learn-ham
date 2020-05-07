@@ -1,2 +1,1 @@
-# Learn HAM (good mails)
-0 3 * * * sa-learn --dbpath /var/lib/spamassassin/.spamassassin --ham ${MAIL_DIR}/*/*/*/cur/*
+0 3 * * * debian-spamd sa-learn --ham ${MAIL_DIR}/*/*/*/cur/*
