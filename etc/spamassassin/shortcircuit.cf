@@ -1,21 +1,9 @@
 ifplugin Mail::SpamAssassin::Plugin::Shortcircuit
-    add_header all Status "_YESNO_, score=_SCORE_ required=_REQD_ tests=_TESTS_ shortcircuit=_SCTYPE_ autolearn=_AUTOLEARN_ version=_VERSION_"
-    meta SC_HAM (USER_IN_WHITELIST||USER_IN_DEF_WHITELIST||USER_IN_ALL_SPAM_TO||NO_RELAYS||ALL_TRUSTED)
-    priority SC_HAM -1000
-    shortcircuit SC_HAM ham
-    score SC_HAM -20
-    meta SC_SPAM (USER_IN_BLACKLIST_TO||USER_IN_BLACKLIST)
-    priority SC_SPAM -950
-    shortcircuit SC_SPAM spam
-    score SC_SPAM 20
-    meta SC_NET_HAM (USER_IN_DKIM_WHITELIST||USER_IN_DK_WHITELIST||USER_IN_SPF_WHITELIST||USER_IN_DEF_DK_WL||USER_IN_DEF_DKIM_WL||USER_IN_DEF_SPF_WL)
-    priority SC_NET_HAM -500
-    shortcircuit SC_NET_HAM ham
-    score SC_NET_HAM -20
-    priority ANY_BOUNCE_MESSAGE -700
-    shortcircuit ANY_BOUNCE_MESSAGE spam
-    score ANY_BOUNCE_MESSAGE 20
-    priority CLAMAV -900
-    shortcircuit CLAMAV spam
-    score CLAMAV 20
+    shortcircuit USER_IN_WHITELIST       on
+    shortcircuit USER_IN_BLACKLIST       on
+    shortcircuit USER_IN_BLACKLIST_TO    on
+    shortcircuit SUBJECT_IN_BLACKLIST    on
+    shortcircuit ALL_TRUSTED             on
+    shortcircuit BAYES_99                spam
+    shortcircuit BAYES_00                ham
 endif

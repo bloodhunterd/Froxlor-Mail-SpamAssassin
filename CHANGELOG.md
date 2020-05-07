@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## <a name="v1-2-0"></a> [1.2.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.2.0) - 07.05.2020
+
+### Features
+* Short circuit simplified.
+
+### Fixes
+* Failing scheduled learning of Ham and Spam messages.
+
 ## <a name="v1-1-2"></a> [1.1.2](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.2) - 06.05.2020
 
 ### Features
