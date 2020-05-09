@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Set timezone
-ln -snf "/usr/share/zoneinfo/${TZ}" etc/localtime
-echo "${TZ}" > /etc/timezone
-
 # Get config files
 r=()
 r+=("$(find /etc/spamassassin/ -type f -name '*.cf')")
