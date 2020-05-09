@@ -3,8 +3,6 @@ version: '3'
 services:
   spamassassin:
     image: bloodhunterd/froxlor-mail-spamassassin
-    environment:
-      - ALLOWED_IPS: 127.0.0.1
     ports:
       - 783
     restart: unless-stopped

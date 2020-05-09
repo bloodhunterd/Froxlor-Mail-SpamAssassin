@@ -25,5 +25,5 @@ service syslog-ng start
 
 service cron start
 
-# Start process and listen on all interfaces and allowed IP's
-spamd -i -A ${ALLOWED_IPS}
+# Start process and listen on all interfaces
+spamd -i -A 0.0.0.0/0
