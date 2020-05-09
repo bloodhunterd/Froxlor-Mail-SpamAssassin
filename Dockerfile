@@ -25,7 +25,11 @@ RUN apt-get install -y --no-install-recommends \
 # Install SpamAssassin and Pyzor
 RUN apt-get install -y --no-install-recommends \
     spamassassin \
+    razor \
     pyzor
+
+RUN razor-admin -create && \
+    razor-admin -register
 
 # Setup Pyzor
 RUN pyzor discover
