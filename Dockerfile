@@ -1,12 +1,12 @@
 FROM debian:stable-slim
 
-# Froxlor
-ENV MAIL_DIR '/var/customers/mail'
-
 # SpamAssassin
 ENV REPORT_SAFE 0
 ENV REQUIRED_SCORE 2.0
 ENV TRUSTED_NETWORKS ''
+
+# Froxlor
+ENV MAIL_DIR '/var/customers/mail'
 
 EXPOSE 783
 
@@ -22,22 +22,21 @@ RUN apt-get install -y --no-install-recommends \
     syslog-ng \
     unattended-upgrades
 
-# Install SpamAssassin and Pyzor
+# Install SpamAssassin, Razor and Pyzor
 RUN apt-get install -y --no-install-recommends \
     spamassassin \
     razor \
     pyzor
 
+# Setup Razor and Pyzor
 RUN razor-admin -create && \
-    razor-admin -register
-
-# Setup Pyzor
-RUN pyzor discover
+    razor-admin -register && \
+    pyzor discover
 
 # Add SpamAssassin configuration
 COPY ./etc/spamassassin /etc/spamassassin/
 
-# Add learn HAM/SPAM Cron
+# Add Ham/Spam learning Cron
 COPY etc/cron.d /etc/cron.d/
 
 COPY ./start.sh /start.sh

@@ -1,1 +1,0 @@
-0 4 * * * debian-spamd sa-learn --spam ${MAIL_DIR}/*/*/*/.Spam/cur/*

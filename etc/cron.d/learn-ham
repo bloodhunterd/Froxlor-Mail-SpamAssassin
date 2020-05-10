@@ -1,1 +1,0 @@
-0 3 * * * debian-spamd sa-learn --ham ${MAIL_DIR}/*/*/*/cur/*

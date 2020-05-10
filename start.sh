@@ -3,7 +3,7 @@
 # Get config files
 r=()
 r+=("$(find /etc/spamassassin/ -type f -name '*.cf')")
-r+=("$(find /etc/cron.d/ -type f -name 'learn-*')")
+r+=("$(find /etc/cron.d/ -type f -name 'sa-learn')")
 
 # Replace environment vars
 for d in "${r[@]}"

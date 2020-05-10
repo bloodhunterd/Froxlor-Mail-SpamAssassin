@@ -1,0 +1,5 @@
+# Learn messages previously defined by the user as Spam first.
+0 2 * * * debian-spamd sa-learn --spam ${MAIL_DIR}/*/*/*/.Spam/cur/*
+# Learn messages falsely leaned as Spam are corrected to be Ham.
+0 3 * * * debian-spamd sa-learn --ham ${MAIL_DIR}/*/*/*/cur/*
+0 4 * * * debian-spamd sa-learn --ham ${MAIL_DIR}/*/*/*/.INBOX.*/*
