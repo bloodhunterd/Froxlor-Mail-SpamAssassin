@@ -17,6 +17,7 @@ See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-s
 | REPORT_SAFE | 0 / 2 | 0 | Add Spam report as attachment instead of modifying the original message.
 | REQUIRED_SCORE | 0.0 - ... | 2.0 | Threshold at which a message is considered spam.
 | TRUSTED_NETWORKS | *IP* | 127.0.0.1 | Exclude networks from Spam check.
+| SPF_WHITELIST | *Email address* |  | Exclude email addresses from SPF check.
 | MAIL_DIR | *Directory path* | /var/customers/mail | Absolute path to the mail directory
 
 ¹ *Possible values are separated by a slash or a range is indicated by a dash.*

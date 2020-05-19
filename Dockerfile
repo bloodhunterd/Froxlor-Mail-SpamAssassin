@@ -4,6 +4,7 @@ FROM debian:stable-slim
 ENV REPORT_SAFE 0
 ENV REQUIRED_SCORE 2.0
 ENV TRUSTED_NETWORKS ''
+ENV SPF_WHITELIST ''
 
 # Froxlor
 ENV MAIL_DIR '/var/customers/mail'
@@ -26,7 +27,8 @@ RUN apt-get install -y --no-install-recommends \
 RUN apt-get install -y --no-install-recommends \
     spamassassin \
     razor \
-    pyzor
+    pyzor \
+    libmail-spf-perl
 
 # Setup Razor and Pyzor
 RUN razor-admin -create && \

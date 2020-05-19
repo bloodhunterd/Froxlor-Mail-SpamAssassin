@@ -1,0 +1,5 @@
+loadplugin Mail::SpamAssassin::Plugin::SPF
+
+ifplugin Mail::SpamAssassin::Plugin::SPF
+    whitelist_from_spf ${SPF_WHITELIST}
+endif

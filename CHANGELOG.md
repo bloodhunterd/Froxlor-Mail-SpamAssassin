@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## <a name="v1-3-0"></a> [1.3.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.3.0) - 19.05.2020
+
+### Features
+* SPF check enabled.
+
+### Fixes
+* Ignoring Shortcircut settings
+
 ## <a name="v1-2-0"></a> [1.2.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.2.0) - 07.05.2020
 
 ### Features

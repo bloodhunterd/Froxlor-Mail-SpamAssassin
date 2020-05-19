@@ -1,3 +1,5 @@
+loadplugin Mail::SpamAssassin::Plugin::Shortcircuit
+
 ifplugin Mail::SpamAssassin::Plugin::Shortcircuit
     shortcircuit BAYES_99                spam
     shortcircuit BAYES_00                ham
