@@ -1,46 +1,63 @@
 FROM debian:stable-slim
 
+# ===================================================
+# Configuration
+# ===================================================
+
 # SpamAssassin
 ENV REPORT_SAFE 0
-ENV REQUIRED_SCORE 2.0
+ENV REQUIRED_SCORE 5.0
 ENV TRUSTED_NETWORKS ''
 ENV SPF_WHITELIST ''
 
 # Froxlor
 ENV MAIL_DIR '/var/customers/mail'
 
+# ===================================================
+# Ports
+# ===================================================
+
 EXPOSE 783
+
+# ===================================================
+# Base packages
+# ===================================================
 
 # Update sources and preinstalled packages
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends
 
-# Install dependencies
 RUN apt-get install -y --no-install-recommends \
+    apt-listchanges \
+    apt-transport-https \
+    ca-certificates \
     cron \
 	gettext-base \
-    logrotate \
     syslog-ng \
     unattended-upgrades
 
-# Install SpamAssassin, Razor and Pyzor
+# ===================================================
+# SpamAssassin, Razor and Pyzor
+# ===================================================
+
 RUN apt-get install -y --no-install-recommends \
     spamassassin \
     razor \
     pyzor \
     libmail-spf-perl
 
-# Setup Razor and Pyzor
 RUN razor-admin -create && \
     razor-admin -register && \
     pyzor discover
 
-# Add SpamAssassin configuration
-COPY ./etc/spamassassin /etc/spamassassin/
+# ===================================================
+# Filesystem
+# ===================================================
 
-# Add Ham/Spam learning Cron
-COPY etc/cron.d /etc/cron.d/
+COPY ./src/ /
 
-COPY ./start.sh /start.sh
+# ===================================================
+# Entrypoint
+# ===================================================
 
 ENTRYPOINT ["bash", "/start.sh"]
