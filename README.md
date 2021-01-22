@@ -1,5 +1,5 @@
 [![Release](https://img.shields.io/github/v/release/bloodhunterd/froxlor-mail-spamassassin-docker?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases)
-[![Docker Build](https://img.shields.io/github/workflow/status/bloodhunterd/froxlor-mail-spamassassin-docker/PHP?style=for-the-badge&label=Docker%20Build)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/actions?query=workflow%3ADocker)
+[![Docker Build](https://img.shields.io/github/workflow/status/bloodhunterd/froxlor-mail-spamassassin-docker/Docker?style=for-the-badge&label=Docker%20Build)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/actions?query=workflow%3ADocker)
 [![Docker Pulls](https://img.shields.io/docker/pulls/bloodhunterd/froxlor-mail-spamassassin?style=for-the-badge)](https://hub.docker.com/r/bloodhunterd/froxlor-mail-spamassassin)
 [![License](https://img.shields.io/github/license/bloodhunterd/froxlor-mail-spamassassin-docker?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/LICENSE)
 
