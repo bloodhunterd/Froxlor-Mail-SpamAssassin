@@ -1,62 +1,51 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes will be documented in this file.
 
-## <a name="v1-3-0"></a> [1.3.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.3.0) - 19.05.2020
+<a name="v1-4-0"></a>
+## [1.4.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.4.0) &#9839; 22.01.2021
 
-### Features
-* SPF check enabled.
+* Default required score set to 5
+* Logrotate removed
+* License changed to MIT
 
-### Fixes
-* Ignoring Shortcircut settings
+<a name="v1-3-0"></a>
+## [1.3.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.3.0) &#9839; 19.05.2020
 
-## <a name="v1-2-0"></a> [1.2.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.2.0) - 07.05.2020
+* SPF check enabled
+* Ignoring Shortcircuit settings
 
-### Features
-* Short circuit simplified.
+<a name="v1-2-0"></a>
+## [1.2.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.2.0) &#9839; 07.05.2020
 
-### Fixes
-* Failing scheduled learning of Ham and Spam messages.
+* Short circuit simplified
+* Failing scheduled learning of Ham and Spam messages
 
-## <a name="v1-1-2"></a> [1.1.2](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.2) - 06.05.2020
+<a name="v1-1-2"></a>
+## [1.1.2](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.2) &#9839; 06.05.2020
 
-### Features
-* None
+* Stopped system logging
 
-### Fixes
-* Stopped system logging.
+<a name="v1-1-1"></a>
+## [1.1.1](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.1) &#9839; 04.05.2020
 
-## <a name="v1-1-1"></a> [1.1.1](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.1) - 04.05.2020
+* Environment configurations extended
+* IP restriction to localhost only
 
-### Features
-* Environment configurations extended.
+<a name="v1-1-0"></a>
+## [1.1.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.0) &#9839; 03.05.2020
 
-### Fixes
-* IP restriction to localhost only.
+* Pyzor support added
 
-## <a name="v1-1-0"></a> [1.1.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.1.0) - 03.05.2020
+<a name="v1-0-1"></a>
+## [1.0.1](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.0.1) &#9839; 28.04.2020
 
-### Features
-* [Pyzor](https://github.com/SpamExperts/pyzor) support added.
+* Refused connection on bridged networks
 
-### Fixes
-* None
+<a name="v1-0-0"></a>
+## [1.0.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.0.0) &#9839; 05.04.2020
 
-## <a name="v1-0-1"></a> [1.0.1](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.0.1) - 28.04.2020
-
-### Features
-* None
-
-### Fixes
-* Refused connection on bridged networks.
-
-## <a name="v1-0-0"></a> [1.0.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases/tag/1.0.0) - 05.04.2020
-
-### Features
-* Spam message as attachment instead of modifying.
-* Threshold at which a message is considered spam.
-* Trusted networks and hosts.
-* Scheduled leaning based on Inbox and Spam folder. 
-
-### Fixes
-* None
+* Spam message as attachment instead of modifying
+* Threshold at which a message is considered spam
+* Trusted networks and hosts
+* Scheduled leaning based on Inbox and Spam folder
