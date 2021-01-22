@@ -1,42 +1,59 @@
-[![Release](https://img.shields.io/github/v/release/bloodhunterd/froxlor-mail-spamassassin-docker?include_prereleases&style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases)
-[![Docker Build](https://img.shields.io/docker/cloud/build/bloodhunterd/froxlor-mail-spamassassin?style=for-the-badge)](https://hub.docker.com/r/bloodhunterd/froxlor-mail-spamassassin)
+[![Release](https://img.shields.io/github/v/release/bloodhunterd/froxlor-mail-spamassassin-docker?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases)
+[![Docker Build](https://img.shields.io/github/workflow/status/bloodhunterd/froxlor-mail-spamassassin-docker/PHP?style=for-the-badge&label=Docker%20Build)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/actions?query=workflow%3ADocker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/bloodhunterd/froxlor-mail-spamassassin?style=for-the-badge)](https://hub.docker.com/r/bloodhunterd/froxlor-mail-spamassassin)
 [![License](https://img.shields.io/github/license/bloodhunterd/froxlor-mail-spamassassin-docker?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/LICENSE)
 
-# SpamAssassin for Froxlor Mail
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/bloodhunterd)
 
-Docker Image of SpamAssassin for Froxlor Mail Server.
+# Froxlor Mail SpamAssassin Docker
 
-## Configuration
+Docker image of SpamAssassin for Froxlor Server Management Panel.
 
-See example [Docker Compose file](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/docker-compose.yml).
+This image is meant to be used with the [Froxlor Mail Docker](https://github.com/bloodhunterd/froxlor-mail-docker) image.
 
-### Environment
+## Deployment
 
-| ENV | Values¹ | Default | Description
-|--- |--- |--- | ---
+### Docker Compose
+
+```dockerfile
+version: '2.4'
+
+services:
+  spamassassin:
+    image: bloodhunterd/froxlor-mail-spamassassin
+    ports:
+      - '783:783'
+    restart: unless-stopped
+    volumes:
+      - ./mail/:/var/customers/mail/:ro
+      - ./spamassassin/:/var/lib/spamassassin/.spamassassin/
+```
+
+### Configuration
+
+| ENV | Values | Default | Description
+| --- | ------ | ------- | -----------
 | REPORT_SAFE | 0 / 2 | 0 | Add Spam report as attachment instead of modifying the original message.
-| REQUIRED_SCORE | 0.0 - ... | 2.0 | Threshold at which a message is considered spam.
-| TRUSTED_NETWORKS | *IP* | 127.0.0.1 | Exclude networks from Spam check.
+| REQUIRED_SCORE | 0.0 - ... | 5.0 | Threshold at which a message is considered spam.
+| TRUSTED_NETWORKS | *IP address* | 127.0.0.1 | Exclude networks from Spam check.
 | SPF_WHITELIST | *Email address* |  | Exclude email addresses from SPF check.
 | MAIL_DIR | *Directory path* | /var/customers/mail | Absolute path to the mail directory
 
-¹ *Possible values are separated by a slash or a range is indicated by a dash.*
+### Ports
+
+| Port | Description
+| ---: | -----------
+| 783  | SpamAssassin
 
 ### Volumes
 
-To use the scheduled Ham and Spam learning, the mail directory must be mounted.
+| Volume | Path | Read only | Description
+| ------ | ---- | :-------: | -----------
+| Customer mail | /var/customers/mail/ | &#10004; | Froxlor customer mail content.
+| Learned messages | /var/lib/spamassassin/.spamassassin/ | &#10008; | Learned HAM and SPAM messages.
 
-```bash
-volumes:
-  - ./mail/:/var/customers/mail/:ro
-```
-
-To persist the learned Ham and Spam messages, the following folder can be mounted.
-
-```bash
-volumes:
-  - ./spamassassin/:/var/lib/spamassassin/.spamassassin/
-```
+| &#10004; Yes | &#10008; No
+| ------------ | -----------
 
 ## Update
 
@@ -60,4 +77,4 @@ docker-compose up -d
 
 ## License
 
-This project is licensed under the Unlicense - see [LICENSE.md](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/LICENSE) file for details.
+This project is licensed under the MIT - see [LICENSE.md](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/LICENSE) file for details.
