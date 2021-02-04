@@ -40,4 +40,4 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           repository: bloodhunterd/froxlor-mail-spamassassin
-          tags: bloodhunterd/froxlor-mail-spamassassin:latest
+          tags: latest

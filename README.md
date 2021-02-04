@@ -23,7 +23,6 @@ services:
     image: bloodhunterd/froxlor-mail-spamassassin
     ports:
       - '783:783'
-    restart: unless-stopped
     volumes:
       - ./mail/:/var/customers/mail/:ro
       - ./spamassassin/:/var/lib/spamassassin/.spamassassin/
