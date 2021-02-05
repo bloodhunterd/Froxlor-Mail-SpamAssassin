@@ -1,11 +1,11 @@
-[![Release](https://img.shields.io/github/v/release/bloodhunterd/froxlor-mail-spamassassin-docker?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/releases)
-[![Docker Build](https://img.shields.io/github/workflow/status/bloodhunterd/froxlor-mail-spamassassin-docker/Docker?style=for-the-badge&label=Docker%20Build)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/actions?query=workflow%3ADocker)
+[![Release](https://img.shields.io/github/v/release/bloodhunterd/froxlor-mail-spamassassin?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases)
+[![Docker Build](https://img.shields.io/github/workflow/status/bloodhunterd/froxlor-mail-spamassassin/Docker?style=for-the-badge&label=Docker%20Build)](https://github.com/bloodhunterd/froxlor-mail-spamassassin/actions?query=workflow%3ADocker)
 [![Docker Pulls](https://img.shields.io/docker/pulls/bloodhunterd/froxlor-mail-spamassassin?style=for-the-badge)](https://hub.docker.com/r/bloodhunterd/froxlor-mail-spamassassin)
-[![License](https://img.shields.io/github/license/bloodhunterd/froxlor-mail-spamassassin-docker?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/bloodhunterd/froxlor-mail-spamassassin?style=for-the-badge)](https://github.com/bloodhunterd/froxlor-mail-spamassassin/blob/master/LICENSE)
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/bloodhunterd)
 
-# Froxlor Mail SpamAssassin Docker
+# Froxlor Mail SpamAssassin
 
 Docker image of SpamAssassin for Froxlor Server Management Panel.
 
@@ -56,7 +56,7 @@ services:
 
 ## Update
 
-Please note the [changelog](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/CHANGELOG.md) to check for configuration changes before updating.
+Please note the [changelog](https://github.com/bloodhunterd/froxlor-mail-spamassassin/blob/master/CHANGELOG.md) to check for configuration changes before updating.
 
 ```bash
 docker-compose pull
@@ -76,4 +76,4 @@ docker-compose up -d
 
 ## License
 
-This project is licensed under the MIT - see [LICENSE.md](https://github.com/bloodhunterd/froxlor-mail-spamassassin-docker/blob/master/LICENSE) file for details.
+This project is licensed under the MIT - see [LICENSE.md](https://github.com/bloodhunterd/froxlor-mail-spamassassin/blob/master/LICENSE) file for details.
