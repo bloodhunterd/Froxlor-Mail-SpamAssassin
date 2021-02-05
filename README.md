@@ -9,7 +9,7 @@
 
 Docker image of SpamAssassin for Froxlor Server Management Panel.
 
-This image is meant to be used with the [Froxlor Mail Docker](https://github.com/bloodhunterd/froxlor-mail-docker) image.
+This image is meant to be used with the [Froxlor Mail](https://github.com/bloodhunterd/froxlor-mail) image.
 
 ## Deployment
 
