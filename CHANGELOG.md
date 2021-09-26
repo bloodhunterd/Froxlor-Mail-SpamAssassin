@@ -2,6 +2,12 @@
 
 All notable changes will be documented in this file.
 
+<a name="v1-5-0"></a>
+## [1.5.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.5.0) &#9839; 26.09.2021
+
+* Updated **Debian** version to 11 (*bullseye*)
+* Updated **SpamAssassin** to version 3.4.6
+
 <a name="v1-4-0"></a>
 ## [1.4.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.4.0) &#9839; 22.01.2021
 

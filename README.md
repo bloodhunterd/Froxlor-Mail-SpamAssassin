@@ -7,9 +7,9 @@
 
 # Froxlor Mail SpamAssassin
 
-Docker image of SpamAssassin for Froxlor Server Management Panel.
+*Docker image of SpamAssassin for Froxlor Server Management Panel.*
 
-This image is meant to be used with the [Froxlor Mail](https://github.com/bloodhunterd/froxlor-mail) image.
+This image is meant to be used with the [Froxlor Mail](https://github.com/bloodhunterd/Froxlor-Mail) image.
 
 ## Deployment
 
@@ -51,12 +51,9 @@ services:
 | Customer mail | /var/customers/mail/ | &#10004; | Froxlor customer mail content.
 | Learned messages | /var/lib/spamassassin/.spamassassin/ | &#10008; | Learned HAM and SPAM messages.
 
-| &#10004; Yes | &#10008; No
-| ------------ | -----------
-
 ## Update
 
-Please note the [changelog](https://github.com/bloodhunterd/froxlor-mail-spamassassin/blob/master/CHANGELOG.md) to check for configuration changes before updating.
+Please note the [changelog](https://github.com/bloodhunterd/Froxlor-Mail-Spamassassin/blob/master/CHANGELOG.md) to check for configuration changes before updating.
 
 ```bash
 docker-compose pull
@@ -76,4 +73,4 @@ docker-compose up -d
 
 ## License
 
-This project is licensed under the MIT - see [LICENSE.md](https://github.com/bloodhunterd/froxlor-mail-spamassassin/blob/master/LICENSE) file for details.
+This project is licensed under the MIT - see [LICENSE.md](https://github.com/bloodhunterd/Froxlor-Mail-Spamassassin/blob/master/LICENSE) file for details.
