@@ -32,7 +32,7 @@ RUN apt-get install -y --no-install-recommends \
     apt-transport-https \
     ca-certificates \
     cron \
-	gettext-base \
+	  gettext-base \
     syslog-ng \
     unattended-upgrades
 
@@ -54,7 +54,11 @@ RUN razor-admin -create && \
 # Filesystem
 # ===================================================
 
+RUN mkdir /var/log/sa-learn
+
 COPY ./src/ /
+
+RUN chmod 0755 /srv/sa-learn.sh
 
 # ===================================================
 # Entrypoint

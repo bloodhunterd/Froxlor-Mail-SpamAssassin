@@ -2,6 +2,11 @@
 
 All notable changes will be documented in this file.
 
+<a name="v1-5-1"></a>
+## [1.5.1](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.5.1) &#9839; 31.08.2022
+
+* Improved Spam and Ham detection (*check interval increased; included all folders; logs added*)
+
 <a name="v1-5-0"></a>
 ## [1.5.0](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.5.0) &#9839; 26.09.2021
 
