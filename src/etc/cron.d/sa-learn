@@ -1,1 +1,1 @@
-*/5 * * * * debian-spamd /srv/sa-learn.sh ${MAIL_DIR}
+0 * * * * root /srv/sa-learn.sh ${MAIL_DIR}
