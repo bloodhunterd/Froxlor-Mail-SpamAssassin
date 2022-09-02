@@ -2,6 +2,12 @@
 
 All notable changes will be documented in this file.
 
+<a name="v1-5-3"></a>
+## [1.5.3](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.5.3) &#9839; 03.09.2022
+
+* Fixed Spam and Ham learning
+* Extended logs with timestamp and runtime
+
 <a name="v1-5-2"></a>
 ## [1.5.2](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.5.2) &#9839; 01.09.2022
 

@@ -33,6 +33,7 @@ RUN apt-get install -y --no-install-recommends \
     ca-certificates \
     cron \
 	  gettext-base \
+    moreutils \
     syslog-ng \
     unattended-upgrades
 

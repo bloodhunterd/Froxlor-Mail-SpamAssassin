@@ -1,17 +1,14 @@
-# Spam folder
-sa-learn --spam "${1}/*/*/*/.Spam/cur/*" >> /var/log/sa-learn/spam.log
+sa-learn --spam "${1}/*/*/*/.Spam/cur/*" | ts -s "[%H:%M:%.S] [SPAM]" | ts '[%Y-%m-%d %H:%M:%.S%z]' >>
+/var/log/sa-learn/spam.log
 
-# Inbox folder
-sa-learn --ham "${1}/*/*/*/cur/*" >> /var/log/sa-learn/ham.log
+sa-learn --ham "${1}/*/*/*/cur/*" | ts -s "[%H:%M:%.S] [INBOX]" | ts '[%Y-%m-%d %H:%M:%.S%z]' >>
+/var/log/sa-learn/ham.log
 
-# Folders in inbox
-sa-learn --ham "${1}/*/*/*/.INBOX.*/cur/*" >> /var/log/sa-learn/ham.log
-
-# Other folders
-for folder in "${1}/*/*/*/.*"/*
+for DIR_PATH in "${1}"/*/*/*/.*/
 do
-  if [ "${folder}" != ".Spam" ]
-  then
-    sa-learn --ham "${1}/*/*/*/${folder}/cur/*" >> /var/log/sa-learn/ham.log
+  DIR_NAME="$(basename "${DIR_PATH}")"
+  if [ "${DIR_NAME}" != "." ] && [ "${DIR_NAME}" != ".." ] && [ "${DIR_NAME}" != ".Spam" ]; then
+    sa-learn --ham "${DIR_PATH}*" | ts -s "[%H:%M:%.S] [FOLDER]" | ts "[%Y-%m-%d %H:%M:%.S%z]" >> /var/log/sa-learn/ham
+    .log
   fi
 done
