@@ -6,7 +6,6 @@ for DIR_PATH in "${1}"/*/*/*/.*/
 do
   DIR_NAME="$(basename "${DIR_PATH}")"
   if [ "${DIR_NAME}" != "." ] && [ "${DIR_NAME}" != ".." ] && [ "${DIR_NAME}" != ".Spam" ]; then
-    sa-learn --ham "${DIR_PATH}*" | ts -s "[%H:%M:%.S] [FOLDER]" | ts "[%Y-%m-%d %H:%M:%.S%z]" >> /var/log/sa-learn/ham
-    .log
+    sa-learn --ham "${DIR_PATH}*" | ts -s "[%H:%M:%.S] [FOLDER]" | ts "[%Y-%m-%d %H:%M:%.S%z]" >> /var/log/sa-learn/ham.log
   fi
 done
