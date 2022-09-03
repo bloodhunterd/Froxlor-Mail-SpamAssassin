@@ -1,8 +1,6 @@
-sa-learn --spam "${1}/*/*/*/.Spam/cur/*" | ts -s "[%H:%M:%.S] [SPAM]" | ts '[%Y-%m-%d %H:%M:%.S%z]' >>
-/var/log/sa-learn/spam.log
+sa-learn --spam "${1}/*/*/*/.Spam/cur/*" | ts -s "[%H:%M:%.S] [SPAM]" | ts '[%Y-%m-%d %H:%M:%.S%z]' >> /var/log/sa-learn/spam.log
 
-sa-learn --ham "${1}/*/*/*/cur/*" | ts -s "[%H:%M:%.S] [INBOX]" | ts '[%Y-%m-%d %H:%M:%.S%z]' >>
-/var/log/sa-learn/ham.log
+sa-learn --ham "${1}/*/*/*/cur/*" | ts -s "[%H:%M:%.S] [INBOX]" | ts '[%Y-%m-%d %H:%M:%.S%z]' >> /var/log/sa-learn/ham.log
 
 for DIR_PATH in "${1}"/*/*/*/.*/
 do
