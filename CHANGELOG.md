@@ -2,6 +2,11 @@
 
 All notable changes will be documented in this file.
 
+<a name="v1-5-4"></a>
+## [1.5.4](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.5.4) &#9839; 03.09.2022
+
+* Fixed wrong line break in Spam and Ham learning script
+
 <a name="v1-5-3"></a>
 ## [1.5.3](https://github.com/bloodhunterd/froxlor-mail-spamassassin/releases/tag/1.5.3) &#9839; 03.09.2022
 
